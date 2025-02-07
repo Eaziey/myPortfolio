@@ -1,4 +1,4 @@
-
+import MenuOverlay from './menuOverlay';
 import { SlideTabs } from './slideTabs';
 import logo from "../assets/1.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -83,15 +83,13 @@ const Navbar = () =>{
             </div>
           </div>
 
-          {isMobileMenuOpen && (
-            <ul className='ml-10 mt-6 flex flex-col gap-6 backdrop-blur-md text-4xl cursor-pointer'>
-              {navigation.map((item, index) => (
-                <li key={index} className='hover:text-black'>{item.name}</li>
-              ))}
-            </ul>
-          )}
+          
         </div>
+        {isMobileMenuOpen && (
+            <MenuOverlay navigation = {navigation} toggle = {toggleMobileMenu}/>
+        )}
       </nav>
+      
       
     </div>
   )

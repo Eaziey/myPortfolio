@@ -1,6 +1,6 @@
 import React from 'react';
 import { introduction_Text } from '../constants';
-import profilePic from "../assets/image.png";
+import profilePic from "../assets/myPic-removebg-preview.png";
 import { motion } from 'motion/react';
 
 const container = ( delay) => ({
@@ -14,10 +14,10 @@ const container = ( delay) => ({
 
 const Hero = () => {
   return (
-    <div className='mb-20 pb-4 lg:mb-40'>
+    <div className='mb-20 pb-4 lg:mb-40 '>
         <div className="flex flex-wrap">
             <div className='w-full lg:w-1/2'>
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-center text-center lg:items-start">
 
                     <motion.h1 
                         variants={container(1)}
@@ -42,16 +42,26 @@ const Hero = () => {
 
                         {introduction_Text}
                     </motion.p>
+                    <div className='mb-10'>
+                        <button className='px-6 py-3 rounded-full w-full lg:w-40 mr-4 bg-white hover:bg-transparent text-black border-2 border-black font-bold '>Hire Me</button>
+                        <button className='px-6 py-3 rounded-full w-full lg:w-40 bg-black hover:bg-transparent text-white border-2 border-white mt-3 font-bold'>Download CV</button>
+                    </div>
                 </div>
             </div>
             
             <div className='w-full lg:w-1/2 lg:p-8'>
-                <div className='flex justify-center'>
-                    <motion.img 
+                <div className='flex justify-center lg:ml-24'>
+                    <motion.div 
+                    initial = {{x: 100, opacity: 0}}
+                    animate = {{x:0, opacity: 1}}
+                    transition = {{duration: 1, delay: 1}}
+                    className='rounded-full bg-transparent border-2 border-white lg:w-[510px] lg:h-[500px] w-[360px] h-[350px] relative'>
+                        <motion.img 
                         initial = {{x: 100, opacity: 0}}
                         animate = {{x:0, opacity: 1}}
                         transition = {{duration: 1, delay: 2}}
-                        src={profilePic} width={420} alt="Letlhogonolo's Picture" className='rounded-xl bg-black lg:mt-16'/>
+                        src={profilePic}  alt="Letlhogonolo's Picture" className='absolute transform -translate-x-1/2 -translate-y-1/2 ml-20 lg:ml-24  w-[200px] lg:w-[300px]'/>
+                    </motion.div>
                 </div>
 
             </div>
