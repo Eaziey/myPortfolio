@@ -75,7 +75,7 @@ const Navbar = () =>{
             <div className="flex items-center">
               <button className='focus:outline-none lg:hidden' onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? (
-                  <FaTimes className = "m-2 h-6 w-5" />
+                  <FaTimes className = "mx-6 h-6 w-5" />
                 ) : (
                   <FaBars className = "mx-6 h-6 w-5"/>
                 )}

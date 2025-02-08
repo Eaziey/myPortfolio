@@ -18,7 +18,7 @@ function App() {
           <AboutMe/>
           <TechStack/>
           <Experience/>
-          
+          <Projects/>
         </div>
       </div>
     </div>

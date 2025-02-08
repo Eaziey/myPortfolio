@@ -1,4 +1,4 @@
-import projectImg1 from "../assets/1.png"
+import projectImg1 from "../assets/139280-OT8HQA-203.jpg"
 
 export const introduction_Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -21,11 +21,47 @@ export const xp = [
 
 export const projects = [
     {
+        id : 1,
         title : "My Project",
         image: projectImg1,
-        company: "University of Pretoria/Universiteit van Pretoria",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"]
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Frontend "],
+        gitUrl: "/",
+        liveWebUrl: "/"
+    },
+    {
+        id : 1,
+        title : "My Project",
+        image: projectImg1,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Frontend "],
+        gitUrl: "/",
+        liveWebUrl: "/"
+    },
+    {
+        id : 1,
+        title : "My Project",
+        image: projectImg1,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Frontend "],
+        gitUrl: "/",
+        liveWebUrl: "/"
+    },
+    {
+        id : 1,
+        title : "My Project",
+        image: projectImg1,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Frontend "],
+        gitUrl: "/",
+        liveWebUrl: "/"
     }
 ]
