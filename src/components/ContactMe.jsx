@@ -46,7 +46,7 @@ const ContactMe = () => {
 
             <div className='flex flex-wrap'>
 
-                <div className='w-full lg:w-1/2'>
+                <div className='w-full lg:w-1/2 '>
 
                     <div className='flex flex-col items-center lg:items-start p-10 lg:my-5'>
                         <h5 className='text-xl font-bold text-sky-400 mt-3'>Let's connect</h5>
