@@ -12,11 +12,13 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@react-email/components": "^0.0.32",
     "motion": "^11.18.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "react-router": "^7.1.5"
+    "react-router": "^7.1.5",
+    "resend": "^4.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
