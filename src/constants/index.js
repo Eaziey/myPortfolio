@@ -22,45 +22,45 @@ export const xp = [
 export const projects = [
     {
         id : 1,
-        title : "My Project",
+        title : "My Project1",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
         technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
-        tag: ["All", "Frontend "],
+        tag: ["All", "Frontend"],
         gitUrl: "/",
         liveWebUrl: "/"
     },
     {
         id : 1,
-        title : "My Project",
+        title : "My Project2",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
         technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
-        tag: ["All", "Frontend "],
+        tag: ["All", "Fullstack"],
         gitUrl: "/",
         liveWebUrl: "/"
     },
     {
         id : 1,
-        title : "My Project",
+        title : "My Project3",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
         technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
-        tag: ["All", "Frontend "],
+        tag: ["All", "Backend"],
         gitUrl: "/",
         liveWebUrl: "/"
     },
     {
         id : 1,
-        title : "My Project",
+        title : "My Project4",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
         technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
-        tag: ["All", "Frontend "],
+        tag: ["All", "Frontend"],
         gitUrl: "/",
         liveWebUrl: "/"
     }
