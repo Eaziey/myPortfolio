@@ -8,6 +8,12 @@ efficient, user-friendly web applications and advancing solutions in computer se
 leveraging technical expertise to drive innovation and deliver impactful, real-world solutions within the
 industry.`
 
+export const contact_message= `I am currently looking for graduate programmes, Internships
+or entry level opportunities within the Software Engineering field.
+
+My inbox is always open. Whether you have an opportunity for me or you just want to say Hi,
+contact me and I'll definitely get back to you :).`;
+
 export const xp = [
     {
         year : "2021 - 2024",
