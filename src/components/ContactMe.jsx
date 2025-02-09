@@ -9,8 +9,11 @@ const instagram_Link = import.meta.env.VITE_INSTAGRAM_LINK;
 
 const ContactMe = () => {
 
+    const [result, setResult] = React.useState("");
+
     const onSubmit = async (event) => {
         event.preventDefault();
+        setResult("Sending....");
         const formData = new FormData(event.target);
     
         formData.append("access_key", email_API);
@@ -28,8 +31,12 @@ const ContactMe = () => {
         }).then((res) => res.json());
     
         if (res.success) {
-          console.log("Success", res);
-        }
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+          } else {
+            console.log("Error", res);
+            setResult(res.message);
+          }
     };
 
     return (
@@ -84,6 +91,7 @@ const ContactMe = () => {
                             </div>
                             <button type="submit" className='my-8 py-2 rounded-lg w-full lg:w-40 bg-sky-400 hover:bg-transparent text-white border-2 border-sky-400 font-semibold'>Send Message</button>
                         </form>
+                        <span>{result}</span>
                     </div>
                 </div>
 
