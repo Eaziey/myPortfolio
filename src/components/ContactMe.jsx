@@ -48,11 +48,11 @@ const ContactMe = () => {
 
                 <div className='w-full lg:w-1/2'>
 
-                    <div className='flex flex-col items-center lg:items-start p-10 my-5'>
-                        <h5 className='text-xl font-bold text-sky-400 mt-8'>Let's connect</h5>
-                        <p className='text-white mt-6 mb-4 max-w-md'>{contact_message}</p>
+                    <div className='flex flex-col items-center lg:items-start p-10 lg:my-5'>
+                        <h5 className='text-xl font-bold text-sky-400 mt-3'>Let's connect</h5>
+                        <p className='text-white mt-5 mb-4 max-w-md'>{contact_message}</p>
 
-                        <div className='socials flex flex-row gap-4 my-7'>
+                        <div className='socials flex flex-row gap-4 mt-7'>
                             <a href={`${gitHub_Link}`} target="_blank" rel="noopener noreferrer">
                                 <FaGithub size={40} className='hover:text-sky-500 hover:size-11'/> 
                             </a>
@@ -73,7 +73,7 @@ const ContactMe = () => {
 
                     <div className='flex flex-col items-center lg:items-start'>
 
-                        <form className='w-full p-10 my-5' onSubmit={onSubmit}>
+                        <form className='w-full p-10 mb-5' onSubmit={onSubmit}>
                             <h5 className='text-xl text-center font-bold text-sky-400 my-7'>Send me an Email</h5>
                             <div className="input-box">
                                 <label htmlFor='name' className='text-white block mb-2 text-sm font-medium mt-6'>Full Name</label>
