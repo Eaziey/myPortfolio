@@ -6,9 +6,9 @@ import { motion } from 'motion/react';
 
 const AboutMe = () => {
   return (
-    <div className='border border-neutral-50 pb-4 lg:mb-40 px-6'>
+    <div className='border border-sky-400 pb-4 lg:mb-32 mb-20 px-6'>
         <h2 className='my-20 text-center text-4xl'>About 
-            <span className='bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-600 bg-clip-text text-4xl tracking-tight text-transparent ml-2'>
+            <span className='text-sky-400 ml-2'>
                 Me
             </span>
         </h2>
@@ -32,7 +32,7 @@ const AboutMe = () => {
                 className="w-full lg:w-1/2"
             >
                 <div className="flex justify-center lg:justify-start">
-                    <p className='my-2 max-w-xl py-6'>{about_me}</p>
+                    <p className='my-2 max-w-xl py-6 mt-10'>{about_me}</p>
                 </div>
             </motion.div>
         </div>

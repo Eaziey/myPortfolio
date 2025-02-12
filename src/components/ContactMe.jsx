@@ -40,7 +40,7 @@ const ContactMe = () => {
     };
 
     return (
-        <div className='container mb-20 pb-4 lg:mb-40 border'>
+        <div className='container mb-20 pb-4 lg:mb-40 border border-sky-400'>
             <p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>
             <h2 className=' text-center text-4xl'>Contact</h2>
 
@@ -77,19 +77,19 @@ const ContactMe = () => {
                             <h5 className='text-xl text-center font-bold text-sky-400 my-7'>Send me an Email</h5>
                             <div className="input-box">
                                 <label htmlFor='name' className='text-white block mb-2 text-sm font-medium mt-6'>Full Name</label>
-                                <input type='text' className='bg-[#18191E] border border-sky-400 placeholder-sky-400 text-sm rounded-lg block w-full p-2.5 ' name= "name" placeholder='John Doe' required/>
+                                <input type='text' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full p-2.5 ' name= "name" placeholder='John Doe' required/>
                             </div>
 
                             <div className="input-box">
                                 <label htmlFor='email' className='text-white block mb-2 text-sm font-medium mt-6'>Your Email Address</label>
-                                <input type='email' className='bg-[#18191E] border border-sky-400 placeholder-sky-400 text-sm rounded-lg block w-full p-2.5 ' name= "email" placeholder='johnDoe@google.com' required/>
+                                <input type='email' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full p-2.5 ' name= "email" placeholder='johnDoe@google.com' required/>
                             </div>
 
                             <div className="input-box">
                                 <label htmlFor='message' className='text-white block mb-2 text-sm font-medium mt-6'>Your message</label>
-                                <textarea className='bg-[#18191E] border border-sky-400 placeholder-sky-400 text-sm rounded-lg block w-full h-60 p-2.5 ' name="message" id="" placeholder="Let's talk about..." required></textarea>
+                                <textarea className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full h-60 p-2.5 ' name="message" id="" placeholder="Let's talk about..." required></textarea>
                             </div>
-                            <button type="submit" className='my-8 py-2 rounded-lg w-full lg:w-40 bg-sky-400 hover:bg-transparent text-white border-2 border-sky-400 font-semibold'>Send Message</button>
+                            <button type="submit" className='my-8 py-2 rounded-full w-full lg:w-40 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>Send Message</button>
                         </form>
                         <span>{result}</span>
                     </div>

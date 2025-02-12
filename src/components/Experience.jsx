@@ -3,18 +3,23 @@ import { xp } from '../constants';
 
 const Experience = () => {
   return (
-    <div className='border border-neutral-50 p-4 lg:mb-40 mb-20'>
-        <h2 className='my-20 text-center text-4xl'>
+    <div className=' pb-4 lg:mb-32 mb-20'>
+        {/*<h2 className='my-10 text-center text-4xl'>
             Experience
+        </h2>*/}
+        <h2 className='my-20 text-center text-4xl text-sky-400'>My 
+            <span className='text-white ml-2'>
+                Experience
+            </span>
         </h2>
-        <div>
+        <div className='mt-14'>
             {xp.map((experience, index) => (
                 <div
                     key = {index}
                     className='mb-8 flex flex-wrap lg:justify-center'
                 >
                     <div className='w-full lg:w-1/4'>
-                        <p className='mb-2 text-sm text-neutral-400'>{experience.year}</p>
+                        <p className='mb-2 text-sm text-white'>{experience.year}</p>
                         
                     </div>
                     <div className='w-full max-w-xl lg:w-3/4'>
