@@ -27,13 +27,22 @@ const Hero = () => {
                             Letlhogonolo Rakgantsho
                     </motion.h1>
 
-                    <motion.span 
+                    {/*<motion.span 
                         variants={container(1.5)}
                         initial = "hidden"
                         animate = "visible"
                         className='bg-gradient-to-r from-sky-400 via-sky-500 to-white bg-clip-text text-3xl tracking-tight text-transparent'>
                         Software Engineer
+                    </motion.span>*/}
+
+                    <motion.span 
+                        variants={container(1.5)}
+                        initial = "hidden"
+                        animate = "visible"
+                        className='bg-clip-text text-3xl tracking-tight text-sky-400'>
+                        Software Engineer
                     </motion.span>
+                    
                     <motion.p 
                         variants={container(2)}
                         initial = "hidden"
