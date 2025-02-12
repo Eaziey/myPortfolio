@@ -20,8 +20,13 @@ const Projects = () => {
 
   return (
     
-    <div className='border-b border-neutral-50 pb-4'>
-        <h2 className='my-10 text-center text-4xl'>Projects</h2>
+    <div className=' pb-4 mb-20 lg:mb-32'>
+        {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
+        <h2 className='my-20 text-center text-sky-400 text-4xl'>My 
+            <span className='text-white ml-2'>
+                Projects
+            </span>
+        </h2>
 
         <div className='text-white flex flex-row justify-center items-center gap-2 py-6 mb-6'>
           <ProjectsFilterButton onClick={handleTagChange} name = "All" isSelected={tag ==="All"} />

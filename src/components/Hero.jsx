@@ -14,7 +14,7 @@ const container = ( delay) => ({
 
 const Hero = () => {
   return (
-    <div className='mb-20 pb-4 lg:mb-40 '>
+    <div className='mb-20 pb-10 lg:mb-24 '>
         <div className="flex flex-wrap">
             <div className='w-full lg:w-1/2'>
                 <div className="flex flex-col items-center text-center lg:items-start">
@@ -23,7 +23,7 @@ const Hero = () => {
                         variants={container(1)}
                         initial = "hidden"
                         animate = "visible"
-                        className='pb-16 text-5xl tracking-tight lg:mt-16 lg:text-6xl'>
+                        className='pb-16 text-5xl tracking-tight lg:mt-16 lg:text-6xl text-sky-400'>
                             Letlhogonolo Rakgantsho
                     </motion.h1>
 
@@ -31,7 +31,7 @@ const Hero = () => {
                         variants={container(1.5)}
                         initial = "hidden"
                         animate = "visible"
-                        className='bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-600 bg-clip-text text-3xl tracking-tight text-transparent'>
+                        className='bg-gradient-to-r from-sky-400 via-sky-500 to-white bg-clip-text text-3xl tracking-tight text-transparent'>
                         Software Engineer
                     </motion.span>
                     <motion.p 
@@ -42,10 +42,14 @@ const Hero = () => {
 
                         {introduction_Text}
                     </motion.p>
-                    <div className='mb-10'>
-                        <button className='px-6 py-3 rounded-full w-full lg:w-40 mr-4 bg-white hover:bg-transparent text-black border-2 border-black font-bold '>Hire Me</button>
-                        <button className='px-6 py-3 rounded-full w-full lg:w-40 bg-black hover:bg-transparent text-white border-2 border-white mt-3 font-bold'>Download CV</button>
-                    </div>
+                    <motion.div 
+                        variants={container(2)}
+                        initial = "hidden"
+                        animate = "visible"
+                        className='mb-10'>
+                        <button className='px-6 py-3 rounded-full w-full lg:w-40 mr-4  bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 mt-3 font-bold '>Hire Me</button>
+                        <button className='px-6 py-3 rounded-full w-full lg:w-40 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 mt-3 font-bold'>Download CV</button>
+                    </motion.div>
                 </div>
             </div>
             
@@ -55,7 +59,7 @@ const Hero = () => {
                     initial = {{x: 100, opacity: 0}}
                     animate = {{x:0, opacity: 1}}
                     transition = {{duration: 1, delay: 1}}
-                    className='rounded-full bg-transparent border-2 border-white lg:w-[510px] lg:h-[500px] w-[360px] h-[350px] relative'>
+                    className='rounded-full bg-transparent border-2 border-sky-400 lg:w-[510px] lg:h-[500px] w-[360px] h-[350px] relative'>
                         <motion.img 
                         initial = {{x: 100, opacity: 0}}
                         animate = {{x:0, opacity: 1}}
