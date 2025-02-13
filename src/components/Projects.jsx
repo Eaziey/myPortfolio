@@ -20,7 +20,7 @@ const Projects = () => {
 
   return (
     
-    <div className=' pb-4 mb-20 lg:mb-32'>
+    <div className=' pb-4 mb-20 lg:mb-28'>
         {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
         <h2 className='my-20 text-center text-sky-400 text-4xl'>My 
             <span className='text-white ml-2'>

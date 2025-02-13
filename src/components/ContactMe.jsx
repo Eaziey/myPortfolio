@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { contact_message } from '../constants';
 import { FaLinkedinIn, FaInstagram, FaGithub} from "react-icons/fa";
 import { motion, useInView } from 'motion/react';
-import { animate } from 'motion';
+import Contactlottie from "../../Contact.json";
+import Lottie from 'lottie-react';
 
 const email_API = import.meta.env.VITE_WEB3FORMS_API_KEY;
 const gitHub_Link = import.meta.env.VITE_GITHUB_LINK;
@@ -77,17 +78,22 @@ const ContactMe = () => {
 
                         <div className='socials flex flex-row gap-4 mt-7'>
                             <a href={`${gitHub_Link}`} target="_blank" rel="noopener noreferrer">
-                                <FaGithub size={40} className='hover:text-sky-500 hover:size-11'/> 
+                                <FaGithub size={40} className='hover:text-sky-500'/> 
                             </a>
 
                             <a href={`${linkedIn_Link}`} target="_blank" rel="noopener noreferrer">
-                                <FaLinkedinIn size={40} className='hover:text-sky-500 hover:size-11'/>
+                                <FaLinkedinIn size={40} className='hover:text-sky-500'/>
                             </a>
 
                             <a href={`${instagram_Link}`} target="_blank" rel="noopener noreferrer">
-                                <FaInstagram size={40} className='hover:text-sky-500 hover:size-11'/>
+                                <FaInstagram size={40} className='hover:text-sky-500'/>
                             </a>
                         </div>
+                        <motion.div 
+                            className='w-[500px]'
+                            >
+                            <Lottie loop={true} animationData={Contactlottie} />
+                        </motion.div>
                     </div>  
 
                 </motion.div>

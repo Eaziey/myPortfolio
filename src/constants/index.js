@@ -38,7 +38,7 @@ export const projects = [
         liveWebUrl: "/"
     },
     {
-        id : 1,
+        id : 2,
         title : "My Project2",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
@@ -49,24 +49,13 @@ export const projects = [
         liveWebUrl: "/"
     },
     {
-        id : 1,
+        id : 3,
         title : "My Project3",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
         technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
         tag: ["All", "Backend"],
-        gitUrl: "/",
-        liveWebUrl: "/"
-    },
-    {
-        id : 1,
-        title : "My Project4",
-        image: projectImg1,
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
-        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
-        tag: ["All", "Frontend"],
         gitUrl: "/",
         liveWebUrl: "/"
     }
