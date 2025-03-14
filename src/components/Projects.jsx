@@ -35,10 +35,10 @@ const Projects = () => {
           <ProjectsFilterButton onClick={handleTagChange} name = "Fullstack" isSelected={tag ==="Fullstack"} />
         </div>
         <div className="flex flex-wrap">
-        {filteredProjects.map((proj) => (
-          <div className='w-full lg:w-1/3'>
+        {filteredProjects.map((proj, index) => (
+          <div key = {index}  className='w-full lg:w-1/3'>
 
-            <div className='flex flex-row items-center text-center lg:items-start'>
+            <div key = {index} className='flex flex-row items-center text-center lg:items-start'>
                 
                    <ProjectCard key = {proj.id} imgUrl={proj.image} title={proj.title} description={proj.description} gitUrl={proj.gitUrl} liveWebUrl={proj.liveWebUrl}/>
                 

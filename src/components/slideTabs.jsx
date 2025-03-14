@@ -85,13 +85,14 @@ export const SlideTabs = (props) =>{
                     }}
                     className="relative flex w-fit " >
                     <Tab setPosition={setPosition2}>
-                        <FaLinkedinIn size={26}/>
-                    </Tab>
-                    
-                    <Tab setPosition={setPosition2}>
                         <FaGithub size={26}/>
 
                     </Tab>
+
+                    <Tab setPosition={setPosition2}>
+                        <FaLinkedinIn size={26}/>
+                    </Tab>
+                    
                     <Tab setPosition={setPosition2}>
                         <FaInstagram size={26}/>
                     </Tab>

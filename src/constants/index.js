@@ -16,6 +16,13 @@ contact me and I'll definitely get back to you :).`;
 
 export const xp = [
     {
+        year : "2025 - 2026",
+        role: "Intern",
+        company: "Tourvest Travel Services",
+        description: `Took on a 12 months Internship at Tourvest Travel Services`,
+        technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ]
+    },
+    {
         year : "2021 - 2024",
         role: "Student",
         company: "University of Pretoria/Universiteit van Pretoria",
@@ -23,6 +30,7 @@ export const xp = [
         graduated with a BSc in IT in Information and Knowledge Sytems , majoring in software development in 2025.`,
         technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ]
     }
+
 ]
 
 export const projects = [
