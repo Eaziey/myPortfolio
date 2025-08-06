@@ -50,7 +50,6 @@ const Navbar = () =>{
 
 
   return(
-    <div className='mb-32 lg:mb-40'>
       <nav className='fixed left-0 right-0 top-4 z-50'>
         <div className='mx-auto hidden max-w-6xl items-center justify-center rounded-full border-2 border-sky-400 py-3 backdrop-blur-lg lg:flex'>
           <div className='flex items-center justify-center gap-6 rounded-full border-black border-2 mx-10 bg-white w-72' >
@@ -91,7 +90,7 @@ const Navbar = () =>{
       </nav>
       
       
-    </div>
+    
   )
 }
 

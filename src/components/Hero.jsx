@@ -1,87 +1,90 @@
 import React from 'react';
+import { useState } from 'react';
 import { introduction_Text } from '../constants';
 import profilePic from "../assets/myPic-removebg-preview.png";
 import { motion } from 'motion/react';
 
-const container = ( delay) => ({
-    hidden: {x: -100, opacity: 0},
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {duration: 0.5, delay: delay}
-    },
-})
+import heroCartoonImg from "../assets/Hero_Cartoon.png";
+import backGroundImg from "../assets/background_Image.jpg";
+
 
 const Hero = () => {
-  return (
-    <div className='mb-20 pb-10 lg:mb-24 '>
-        <div className="flex flex-wrap">
-            <div className='w-full lg:w-1/2'>
-                <div className="flex flex-col items-center text-center lg:items-start">
 
-                    <motion.h1 
-                        variants={container(1)}
-                        initial = "hidden"
-                        animate = "visible"
-                        className='pb-16 text-5xl tracking-tight lg:mt-16 lg:text-6xl text-sky-400'>
-                            Letlhogonolo Rakgantsho
-                    </motion.h1>
+    const [textVisible, setTextVisible] = useState(false);
 
-                    {/*<motion.span 
-                        variants={container(1.5)}
-                        initial = "hidden"
-                        animate = "visible"
-                        className='bg-gradient-to-r from-sky-400 via-sky-500 to-white bg-clip-text text-3xl tracking-tight text-transparent'>
-                        Software Engineer
-                    </motion.span>*/}
+    const textVariants = {
+        hidden: {
+           opacity: 0,
+           y: 20,
+           transition: { duration: 0.3 }
+         },
+         visible: {
+           opacity: 1,
+           y: 0,
+           transition: { duration: 0.3 }
+         }
+      };
 
-                    <motion.span 
-                        variants={container(1.5)}
-                        initial = "hidden"
-                        animate = "visible"
-                        className='bg-clip-text text-3xl tracking-tight text-sky-400'>
-                        Software Engineer
-                    </motion.span>
-                    
-                    <motion.p 
-                        variants={container(2)}
-                        initial = "hidden"
-                        animate = "visible"
-                        className=' my-1 max-w-xl py-6 font-light tracking-tighter'>
+    return (
 
-                        {introduction_Text}
-                    </motion.p>
-                    <motion.div 
-                        variants={container(2)}
-                        initial = "hidden"
-                        animate = "visible"
-                        className='mb-10'>
-                        <button className='px-6 py-3 rounded-full w-full lg:w-40 mr-4  bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 mt-3 font-bold '>Hire Me</button>
-                        <button className='px-6 py-3 rounded-full w-full lg:w-40 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 mt-3 font-bold'>Download CV</button>
+         <>
+            <div className='h-screen w-full bg-sky-400 flex items-end justify-center relative'>
+                <img src={backGroundImg} className='absolute'/>
+
+                <motion.div 
+                    className='relative h-3/5 z-10 flex items-center justify-center w-1/2 cursor-pointer'
+                    whileHover={{scale: 1.15}}
+                    transition={{duration: '0.4', ease: 'easeInOut', delay: 0.1}}
+                    onHoverStart={() => setTextVisible(true)}
+                    onHoverEnd={() => setTextVisible(false)}
+                >
+                    <img 
+                        src={heroCartoonImg} 
+                        className='h-full  z-10'
+
+                    />
+
+
+
+                    <motion.div className="absolute w-full h-full flex items-center justify-between px-10 z-20 pointer-events-none">
+                        
+                        <motion.div 
+                            className="space-y-20 text-white mt-10"
+                            variants={textVariants}
+                            initial="hidden"
+                            animate={textVisible ? "visible" : "hidden"}
+                        >
+                            <div className="text-xl text-center font-semibold border rounded-full p-2 ml-16">
+                                <h3 >Frontend Developer</h3>
+                            </div>
+                            <div className="text-xl text-center font-semibold border rounded-full p-2 mr-16">
+                                <h3 >Backend Developer</h3>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="space-y-20 text-white p-10"
+                            variants={textVariants}
+                            initial="hidden"
+                            animate={textVisible ? "visible" : "hidden"}
+                        >
+                            <div className="text-xl text-center font-semibold border rounded-full p-2 ml-16">
+                                <h3 >Fullstack Developer</h3>
+                            </div>
+                            <div className="text-xl text-center font-semibold border rounded-full p-2 mr-16">
+                                <h3 >Cool Tech Nerd</h3>
+                            </div>
+                        </motion.div>
                     </motion.div>
-                </div>
-            </div>
-            
-            <div className='w-full lg:w-1/2 lg:p-8'>
-                <div className='flex justify-center lg:ml-24'>
-                    <motion.div 
-                    initial = {{x: 100, opacity: 0}}
-                    animate = {{x:0, opacity: 1}}
-                    transition = {{duration: 1, delay: 1}}
-                    className='rounded-full bg-transparent border-2 border-sky-400 lg:w-[510px] lg:h-[500px] w-[360px] h-[350px] relative'>
-                        <motion.img 
-                        initial = {{x: 100, opacity: 0}}
-                        animate = {{x:0, opacity: 1}}
-                        transition = {{duration: 1, delay: 2}}
-                        src={profilePic}  alt="Letlhogonolo's Picture" className='absolute transform -translate-x-1/2 -translate-y-1/2 ml-20 lg:ml-24  w-[200px] lg:w-[300px]'/>
-                    </motion.div>
-                </div>
+
+
+                </motion.div>
+
 
             </div>
-            
-        </div>
-    </div>
-  )
+        </>
+    
+    )
 }
 
 export default Hero

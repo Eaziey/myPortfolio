@@ -2,9 +2,11 @@ import { motion } from "motion/react";
 import { useState, useRef } from "react";
 import { RiHome2Fill, RiAccountCircle2Fill, RiSuitcaseFill, RiCodeBoxFill,  RiLightbulbFill,  RiMailFill} from "react-icons/ri";
 
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaGithub} from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaGithub, FaFileDownload} from "react-icons/fa";
 
 import logo from "../assets/1.png";
+
+import cvIcon from "../assets/cv.png"
 
 export const SlideTabs = (props) =>{
 
@@ -94,7 +96,7 @@ export const SlideTabs = (props) =>{
                     </Tab>
                     
                     <Tab setPosition={setPosition2}>
-                        <FaInstagram size={26}/>
+                        <FaFileDownload size={26}/>
                     </Tab>
                     <Cursor2 position={position2}/>
                 </ul>

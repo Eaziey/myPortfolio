@@ -6,9 +6,9 @@ import { motion } from 'motion/react';
 
 const AboutMe = () => {
   return (
-    <div className='border border-sky-400 pb-4 lg:mb-32 mb-20 px-6'>
+    <div className='border border-black pb-4 lg:mb-32 mb-20 px-6 bg-gradient-to-r from-sky-400 via-gray-800 to-black'>
         <h2 className='my-20 text-center text-4xl'>About 
-            <span className='text-sky-400 ml-2'>
+            <span className='text-black ml-2'>
                 Me
             </span>
         </h2>
