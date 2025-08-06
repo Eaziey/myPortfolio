@@ -64,7 +64,7 @@ const ContactMe = () => {
 
     const isInView = useInView(ref, {margin: "-100px"})
     return (
-        <div ref={ref} className='container mb-20 pb-1 border border-sky-400 overflow-y-hidden'>
+        <div ref={ref} className='container mb-20 pb-1 border border-sky-400 overflow-y-hidden lg:h-screen'>
             <p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>
             <h2 className=' text-center text-4xl'>Contact</h2>
 

@@ -3,7 +3,7 @@ import { xp } from '../constants';
 
 const Experience = () => {
   return (
-    <div className=' pb-4 lg:mb-32 mb-20'>
+    <div className='lg:h-screen w-full pb-4 lg:mb-32 mb-20'>
         {/*<h2 className='my-10 text-center text-4xl'>
             Experience
         </h2>*/}

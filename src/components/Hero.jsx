@@ -5,7 +5,7 @@ import profilePic from "../assets/myPic-removebg-preview.png";
 import { motion } from 'motion/react';
 
 import heroCartoonImg from "../assets/Hero_Cartoon.png";
-import backGroundImg from "../assets/background_Image.jpg";
+import backGroundImg from "../assets/backgroundImg_Dark.jpg";
 
 
 const Hero = () => {
@@ -28,13 +28,12 @@ const Hero = () => {
     return (
 
          <>
-            <div className='h-screen w-full bg-sky-400 flex items-end justify-center relative'>
+            <div className='h-screen w-full flex items-end justify-center relative'>
                 <img src={backGroundImg} className='absolute'/>
 
                 <motion.div 
                     className='relative h-3/5 z-10 flex items-center justify-center w-1/2 cursor-pointer'
-                    whileHover={{scale: 1.15}}
-                    transition={{duration: '0.4', ease: 'easeInOut', delay: 0.1}}
+                    
                     onHoverStart={() => setTextVisible(true)}
                     onHoverEnd={() => setTextVisible(false)}
                 >

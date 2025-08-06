@@ -5,8 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
+      extend: {
+        colors: {
+          skylight: '#38b6ff',
+          darkMode: '#1f2020',
+          tooRed: '#f70a09'
+        }
+      },
+    },
   plugins: [],
 }
 
