@@ -3,7 +3,7 @@ import { SlideTabs } from './slideTabs';
 import logo from "../assets/1.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-
+import { motion } from 'motion/react';
 import { useState } from 'react';
 
 const navigation = [
@@ -18,6 +18,8 @@ const navigation = [
 const Navbar = () =>{
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const [isHidden, setIsHidden] = useState(false);
 
   const toggleMobileMenu= () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -50,8 +52,24 @@ const Navbar = () =>{
 
 
   return(
-      <nav className='fixed left-0 right-0 top-4 z-50'>
-        <div className='mx-auto hidden max-w-6xl items-center justify-center rounded-full border-2 border-sky-400 py-3 backdrop-blur-lg lg:flex'>
+      <motion.nav 
+        className='fixed left-0 right-0 top-4 z-50'
+        
+      >
+        <motion.div 
+          className='mx-auto hidden max-w-6xl items-center justify-center rounded-full border-2 border-sky-400 py-3 backdrop-blur-lg lg:flex'
+          animate = {isHidden? "hidden" : "visible"}
+          variants = {{
+          hidden: {
+            y: "-150%",
+             transition: { duration: 0.5, ease: "easeInOut" }
+          },
+          visible: {
+            y : "0%",
+             transition: { duration: 0.5, ease: "easeInOut" }
+          }
+        }}
+        >
           <div className='flex items-center justify-center gap-6 rounded-full border-black border-2 mx-10 bg-white w-72' >
             <a href='#' >
               <img src = {logo} width={60} height={60} alt= "logo" className=" mx-10" />
@@ -61,7 +79,7 @@ const Navbar = () =>{
           <div className='flex items-center justify-center gap-4'>
             <SlideTabs nav = {navigation}/>
           </div>
-        </div>
+        </motion.div>
 
         {/*mobile menu */}
         <div className='mx-2 items-center justify-center rounded-full border-2 backdrop-blur-md lg:hidden p-1'>
@@ -87,7 +105,7 @@ const Navbar = () =>{
         {isMobileMenuOpen && (
             <MenuOverlay navigation = {navigation} toggle = {toggleMobileMenu}/>
         )}
-      </nav>
+      </motion.nav>
       
       
     
