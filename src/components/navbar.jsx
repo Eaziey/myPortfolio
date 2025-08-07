@@ -3,8 +3,8 @@ import { SlideTabs } from './slideTabs';
 import logo from "../assets/1.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-import { motion } from 'motion/react';
-import { useState } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'motion/react';
+import { useState, useRef } from 'react';
 
 const navigation = [
   { name: `Home`, href: '#', current: true },
@@ -20,6 +20,23 @@ const Navbar = () =>{
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [isHidden, setIsHidden] = useState(false);
+  const {scrollY} = useScroll();
+  const lastYRef = useRef(0);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+
+    const diff = y - lastYRef.current;
+
+    if(Math.abs(diff) > 50){
+
+      setIsHidden(diff > 0);
+
+      lastYRef.current = y;
+    }
+    
+    
+
+  });
 
   const toggleMobileMenu= () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -62,11 +79,11 @@ const Navbar = () =>{
           variants = {{
           hidden: {
             y: "-150%",
-             transition: { duration: 0.5, ease: "easeInOut" }
+             transition: { duration: 0.8, ease: "easeInOut" }
           },
           visible: {
             y : "0%",
-             transition: { duration: 0.5, ease: "easeInOut" }
+             transition: { duration: 0.8, ease: "easeInOut" }
           }
         }}
         >
