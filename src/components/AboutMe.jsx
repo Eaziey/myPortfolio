@@ -6,10 +6,10 @@ import { motion } from 'motion/react';
 
 const AboutMe = () => {
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen overflow-hidden'>
         
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap border border-skylight pb-2">
             <motion.div 
                 whileInView={{opacity: 1, x: 0}}
                 initial = {{opacity: 0, x: -100}}
