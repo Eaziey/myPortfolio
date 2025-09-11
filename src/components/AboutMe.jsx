@@ -61,7 +61,9 @@ const AboutMe = () => {
                     </motion.div>
                     
                 </div>
-                <button onClick={toggleExperience} className='p-4 mt-20 rounded-full w-full lg:w-60 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>{!viewExperience? 'View My Experience': 'Get to know me'}</button>
+                <button onClick={toggleExperience} className='p-4 mt-20 rounded-full w-full lg:w-60 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>
+                    {viewExperience? 'View My Experience': 'Get to know me'}
+                </button>
                     
             </div>
 
