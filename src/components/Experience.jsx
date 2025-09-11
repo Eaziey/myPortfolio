@@ -3,13 +3,13 @@ import { xp } from '../constants';
 
 const Experience = () => {
   return (
-    <div className='w-full px-6'>
+    <div className='max-w-4xl px-6'>
         <h2 className='text-4xl text-sky-400'>My 
             <span className='text-black ml-2'>
                 Experience
             </span>
         </h2>
-        <div className='mt-14'>
+        <div className='mt-14 text-left'>
             {xp.map((experience, index) => (
                 <div
                     key = {index}

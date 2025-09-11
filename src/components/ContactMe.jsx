@@ -65,7 +65,7 @@ const ContactMe = () => {
     const isInView = useInView(ref, {margin: "-100px"})
     return (
         <>
-            <div ref={ref} className='zmb-20 pb-1 border border-sky-400 overflow-y-hidden h-screen w-full'>
+            <div ref={ref} className='zmb-20 pb-1 border-y-2 border-sky-400 overflow-y-hidden h-screen w-full'>
                 <p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>
                 <h2 className=' text-center text-4xl'>Contact</h2>
                 <div className='flex flex-wrap'>

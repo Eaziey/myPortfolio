@@ -24,7 +24,7 @@ const AboutMe = () => {
         <div className="flex flex-wrap pb-2">
             <div 
                 
-                className='lg:h-screen w-full lg:w-1/3'
+                className='lg:h-screen w-full lg:w-2/5'
             >
                 <div className="lg:h-full flex items-center justify-center bg-darkMode">
                     <img src={myImg} alt="Letlhogonolo's Picture" className=' h-full '/>
@@ -35,26 +35,26 @@ const AboutMe = () => {
                 whileInView={{opacity: 1, x: 0}}
                 initial = {{opacity: 0, x: 100}}
                 transition={{duration: 1}}
-                className="lg:h-screen w-full lg:w-2/3"
+                className="lg:h-screen w-full lg:w-3/5"
             >
                  
             <div className="flex flex-col items-center justify-center text-center bg-white h-screen">
-                <div className=" relative w-full max-w-4xl h-1/2 [perspective:1000px] ">
+                <div className=" relative w-full max-w-6xl h-1/2 [perspective:1000px] ">
                 
                     <motion.div 
                         className='w-full h-full [transform-style:preserve-3d]'
                         animate = {{rotateY: !viewExperience? 180: 0}}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="absolute inset-0 flex flex-col items-center justify-center [backface-visibility:hidden]">
+                        <div className="absolute inset-0 flex flex-col items-center  [backface-visibility:hidden]">
                             <div className="max-w-2xl text-center"><h2 className="text-4xl text-black">
                               About <span className="text-skylight ml-2">Me</span>
                             </h2>
-                            <p className="text-xl font-semibold mt-14 text-darkMode">
+                            <p className="text-xl text-left font-semibold mt-14 text-darkMode">
                               {about_me}
                             </p></div>
                         </div>
-                        <div className="absolute inset-0 flex flex-col items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        <div className="absolute inset-0 flex flex-col items-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
                             <Experience/>
                         
                         </div>
