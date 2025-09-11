@@ -7,7 +7,7 @@ import { BiLogoPostgresql, BiLogoTailwindCss } from 'react-icons/bi';
 
 const TechStack = () => {
   return (
-    <div className='border border-sky-400 mb-20 lg:mb-32'>
+    <div className=' w-full h-screen'>
         {/*<h2 className='my-20 text-center text-4xl'>Technologies</h2>*/}
         <h2 className='my-20 text-center text-4xl'>Tech
             <span className='text-sky-400 ml-2'>

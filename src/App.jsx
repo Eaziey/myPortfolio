@@ -18,7 +18,6 @@ function App() {
       <AboutMe/>
       <Projects/>
       <TechStack/>
-      <Experience/>
       <ContactMe/>
         
     </div>
