@@ -25,7 +25,7 @@ export const xp = [
     {
         year : "2021 - 2024",
         role: "Student",
-        company: "University of Pretoria/Universiteit van Pretoria",
+        company: "University of Pretoria",
         description: `Studied full time for an undergraduate degree. Finally
         graduated with a BSc in IT in Information and Knowledge Sytems , majoring in software development in 2025.`,
         technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ]

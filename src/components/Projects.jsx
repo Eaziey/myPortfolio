@@ -27,11 +27,11 @@ const Projects = () => {
 
   return (
     
-    <div ref={targetRef} className='relative h-[300vh]'>
+    <div ref={targetRef} className='relative h-[300vh] '>
       
       <div className='sticky top-0 h-screen items-center overflow-hidden'>
           {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
-         <h2 className='mt-10 mb-5 text-center text-sky-400 text-4xl'>My 
+         <h2 className='mt-20 mb-5 text-center text-sky-400 text-4xl'>My 
               <span className='text-white ml-2'>
                   Projects
               </span>
@@ -48,7 +48,7 @@ const Projects = () => {
             style={{x}}
           >
           {filteredProjects.map((proj, index) => (
-            <div key = {index}  className='w-full lg:w-1/3'>
+            <div key = {index}  className='w-full lg:w-1/3 mt-10'>
 
               <div key = {index} className='flex flex-row items-center text-center lg:items-start'>
 

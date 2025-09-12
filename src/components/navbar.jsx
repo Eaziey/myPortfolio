@@ -1,4 +1,4 @@
-import MenuOverlay from './menuOverlay';
+import MenuOverlay from "./MenuOverlay";
 import { SlideTabs } from './slideTabs';
 import logo from "../assets/1.png";
 import { FaBars, FaTimes } from 'react-icons/fa';

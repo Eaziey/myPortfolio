@@ -3,47 +3,25 @@ import { RiReactjsLine, RiCss3Line, RiHtml5Line, RiJavascriptLine } from 'react-
 import { SiMongodb } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { BiLogoPostgresql, BiLogoTailwindCss } from 'react-icons/bi';
-
+import Marquee from './Marquee';
 
 const TechStack = () => {
+  
+
   return (
-    <div className='border border-sky-400 mb-20 lg:mb-32'>
-        {/*<h2 className='my-20 text-center text-4xl'>Technologies</h2>*/}
-        <h2 className='my-20 text-center text-4xl'>Tech
+
+    
+     <div className='overflow-x-hidden container mx-auto w-full h-screen'>
+      <hr className='border border-sky-400 '></hr>
+      <h2 className='my-20 text-center text-4xl'>Tech
             <span className='text-sky-400 ml-2'>
                 Stack
             </span>
         </h2>
 
-        <div className='flex flex-wrap items-center justify-center gap-4 mb-20'>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <RiReactjsLine className='text-7xl text-cyan-400'/>
-
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <RiCss3Line className='text-7xl text-white'/>
-            </div>
-            
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <RiJavascriptLine className='text-7xl text-yellow-400'/>
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <RiHtml5Line className='text-7xl text-white'/>
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <FaNodeJs className='text-7xl text-green-500'/>
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <BiLogoPostgresql className='text-7xl text-blue-600'/>
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <SiMongodb className='text-7xl text-green-500'/>
-            </div>
-            <div className='rounded-2xl border-4 border-neutral-50 p-4'>
-                <BiLogoTailwindCss className='text-7xl text-sky-500'/>
-            </div>
-        </div>
+      <Marquee/>
     </div>
+   
   )
 }
 
