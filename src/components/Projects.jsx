@@ -27,7 +27,7 @@ const Projects = () => {
 
   return (
     
-    <div ref={targetRef} className='relative h-[300vh] border-b-2 border-sky-400'>
+    <div ref={targetRef} className='relative h-[300vh] '>
       
       <div className='sticky top-0 h-screen items-center overflow-hidden'>
           {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
