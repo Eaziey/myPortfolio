@@ -37,10 +37,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                 </div>
             </div>
 
-            <motion.div 
-                whileInView={{opacity: 1, x: 0}}
-                initial = {{opacity: 0, x: 100}}
-                transition={{duration: 1}}
+            <div 
                 className="lg:h-screen w-full lg:w-3/5"
             >
                  
@@ -76,7 +73,7 @@ const AboutMe = React.forwardRef((props, ref) => {
              
 
                 
-            </motion.div>
+            </div>
             
         </div>
 

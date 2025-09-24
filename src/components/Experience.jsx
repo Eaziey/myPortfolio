@@ -15,11 +15,11 @@ const Experience = React.forwardRef((props, ref) => {
                     key = {index}
                     className='mb-12 flex flex-wrap'
                 >
-                    <div className='mt-2 w-full lg:w-1/3'>
+                    <div className='mt-1 w-full lg:w-1/4'>
                         <h6 className='mb-2 text-xl text-black font-semibold'>{experience.year}</h6>
                         
                     </div>
-                    <div className=' w-full max-w-xl lg:w-2/3'>
+                    <div className=' w-full max-w-xl lg:w-3/4'>
                         <h6 className='mb-2 text-xl text-sky-400 font-semibold'>
                             {experience.role}  <span className=' text-black'>- {experience.company}</span>
                         </h6>
