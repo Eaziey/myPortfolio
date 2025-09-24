@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useImperativeHandle} from 'react';
 import myImg from "../assets/about_Me_Bg.jpg";
 import { about_me } from '../constants';
 
@@ -6,20 +6,25 @@ import { motion } from 'motion/react';
 import Experience from './Experience';
 
 
-
-
-
 const AboutMe = React.forwardRef((props, ref) => {
 
-    const [viewExperience, setViewExperience] = useState(true);
+    const [viewAbout, setViewAbout] = useState(true);
 
-    const toggleExperience = (e) => {
+    const containerRef = useRef(null);
+
+    useImperativeHandle(ref, () => ({
+        scrollRef: containerRef.current,
+        showAbout: () => setViewAbout(true),
+        showExperience: () => setViewAbout(false)
+    }));
+
+    const toggleAbout = (e) => {
 
         e.preventDefault();
-        setViewExperience(!viewExperience);
+        setViewAbout(!viewAbout);
     }
   return (
-    <div ref={ref} className='w-full h-screen overflow-hidden'>
+    <div ref={containerRef} className='w-full h-screen overflow-hidden'>
         
 
         <div className="flex flex-wrap pb-2">
@@ -32,10 +37,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                 </div>
             </div>
 
-            <motion.div 
-                whileInView={{opacity: 1, x: 0}}
-                initial = {{opacity: 0, x: 100}}
-                transition={{duration: 1}}
+            <div 
                 className="lg:h-screen w-full lg:w-3/5"
             >
                  
@@ -44,7 +46,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                 
                     <motion.div 
                         className='w-full h-full [transform-style:preserve-3d]'
-                        animate = {{rotateY: !viewExperience? 180: 0}}
+                        animate = {{rotateY: !viewAbout? 180: 0}}
                         transition={{ duration: 0.8 }}
                     >
                         <div className="absolute inset-0 flex flex-col items-center  [backface-visibility:hidden]">
@@ -62,8 +64,8 @@ const AboutMe = React.forwardRef((props, ref) => {
                     </motion.div>
                     
                 </div>
-                <button onClick={toggleExperience} className='p-4 mt-20 rounded-full w-full lg:w-60 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>
-                    {viewExperience? 'View My Experience': 'Get to know me'}
+                <button onClick={toggleAbout} className='p-4 mt-20 rounded-full w-full lg:w-60 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>
+                    {viewAbout? 'View My Experience': 'Get to know me'}
                 </button>
                     
             </div>
@@ -71,7 +73,7 @@ const AboutMe = React.forwardRef((props, ref) => {
              
 
                 
-            </motion.div>
+            </div>
             
         </div>
 

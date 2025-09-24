@@ -24,10 +24,18 @@ const Navbar = ({scrollToSection , refs}) =>{
 
     const sectionRef = refs[name];
 
-    if(sectionRef){
-      scrollToSection(sectionRef);
+    if(!sectionRef?.current) return;
+
+    if(name === "about"){
+      console.log(name);
+      sectionRef.current.showAbout();
+      console.log(sectionRef);
+    }
+    else if(name === "experience"){
+      sectionRef.current.showExperience();
     }
 
+    scrollToSection(sectionRef);
     setIsMobileMenuOpen(false);
 
   } 
