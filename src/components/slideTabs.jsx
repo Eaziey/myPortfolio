@@ -8,9 +8,7 @@ import logo from "../assets/1.png";
 
 import cvIcon from "../assets/cv.png"
 
-export const SlideTabs = (props) =>{
-
-    const {nav, } = props;
+export const SlideTabs = ({onLinkClick}) =>{
     
     const [position, setPosition] = useState({
 
@@ -48,26 +46,32 @@ export const SlideTabs = (props) =>{
 
                     <Tab 
                         setPosition={setPosition}
+                        onClick={(e) => onLinkClick(e, "about")}
                     >
                         {/*<RiAccountCircle2Fill/>*/} About
                     </Tab>
                     <Tab 
                         setPosition={setPosition}
+                        onClick={(e) => onLinkClick(e, "about")}
+                        
                     >
                         {/*<RiSuitcaseFill/>*/} Experience
                     </Tab>
                     <Tab 
                         setPosition={setPosition}
+                        onClick={(e) => onLinkClick(e, "projects")}
                     >
                         {/*<RiCodeBoxFill/>*/} Projects
                     </Tab>
                     <Tab 
                         setPosition={setPosition}
+                        onClick={(e) => onLinkClick(e, "skills")}
                     >
                         {/*<RiLightbulbFill/>*/} Skills
                     </Tab>
                     <Tab 
                         setPosition={setPosition}
+                        onClick={(e) => onLinkClick(e, "contact")}
                     >
                         {/*<RiMailFill/>*/} Contact
                     </Tab>
@@ -105,7 +109,7 @@ export const SlideTabs = (props) =>{
     )
 }
 
-const Tab = ({children, setPosition}) =>{
+const Tab = ({children, setPosition, onClick}) =>{
 
     const ref = useRef(null);
     
@@ -126,6 +130,7 @@ const Tab = ({children, setPosition}) =>{
             })
             
         }}
+        onClick={onClick}
     >
         {children}
     </li>)

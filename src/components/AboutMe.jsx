@@ -8,9 +8,10 @@ import Experience from './Experience';
 
 
 
-const AboutMe = () => {
 
-    const [viewExperience, setViewExperience] = useState(false);
+const AboutMe = React.forwardRef((props, ref) => {
+
+    const [viewExperience, setViewExperience] = useState(true);
 
     const toggleExperience = (e) => {
 
@@ -18,7 +19,7 @@ const AboutMe = () => {
         setViewExperience(!viewExperience);
     }
   return (
-    <div className='w-full h-screen overflow-hidden'>
+    <div ref={ref} className='w-full h-screen overflow-hidden'>
         
 
         <div className="flex flex-wrap pb-2">
@@ -77,6 +78,6 @@ const AboutMe = () => {
         
     </div>
   )
-}
+});
 
 export default AboutMe

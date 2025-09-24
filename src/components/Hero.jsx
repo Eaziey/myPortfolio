@@ -8,7 +8,7 @@ import heroCartoonImg from "../assets/Hero_Cartoon.png";
 import backGroundImg from "../assets/backgroundImg_Dark.jpg";
 
 
-const Hero = () => {
+const Hero = React.forwardRef((props, ref) => {
 
     const [textVisible, setTextVisible] = useState(false);
 
@@ -28,7 +28,7 @@ const Hero = () => {
     return (
 
          <>
-            <div className='h-screen w-full flex items-end justify-center relative'>
+            <div ref={ref} id="Home" className='h-screen w-full flex items-end justify-center relative'>
                 <img src={backGroundImg} className='absolute'/>
 
                 <motion.div 
@@ -84,6 +84,6 @@ const Hero = () => {
         </>
     
     )
-}
+})
 
 export default Hero

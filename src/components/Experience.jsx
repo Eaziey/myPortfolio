@@ -1,9 +1,9 @@
 import React from 'react';
 import { xp } from '../constants';
 
-const Experience = () => {
+const Experience = React.forwardRef((props, ref) => {
   return (
-    <div className='max-w-4xl px-6'>
+    <div ref={ref} className='max-w-4xl px-6'>
         <h2 className='text-4xl text-sky-400'>My 
             <span className='text-black ml-2'>
                 Experience
@@ -31,6 +31,6 @@ const Experience = () => {
         </div>
     </div>
   )
-}
+})
 
 export default Experience
