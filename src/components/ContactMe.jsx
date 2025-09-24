@@ -10,7 +10,7 @@ const gitHub_Link = import.meta.env.VITE_GITHUB_LINK;
 const linkedIn_Link = import.meta.env.VITE_LINKEDIN_LINK;
 const instagram_Link = import.meta.env.VITE_INSTAGRAM_LINK;
 
-const ContactMe = () => {
+const ContactMe = React.forwardRef((props, ref) => {
 
     
 
@@ -44,7 +44,7 @@ const ContactMe = () => {
           }
     };
 
-    const ref = useRef();
+    const localRef = useRef();
 
     const variants = {
         initial:{
@@ -62,10 +62,11 @@ const ContactMe = () => {
         
     }
 
-    const isInView = useInView(ref, {margin: "-100px"})
+    const isInView = useInView(localRef, {margin: "-100px"})
     return (
         <>
-            <div ref={ref} className=' pb-1 border-2 border-sky-400 overflow-y-hidden max-h-screen max-w-full mx-5'>
+            <div ref = {ref}>
+            <div ref={localRef} className=' pb-1 border-2 border-sky-400 overflow-y-hidden max-h-screen max-w-full mx-5'>
                 <p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>
                 <h2 className=' text-center text-4xl'>Contact</h2>
                 <div className='flex flex-wrap'>
@@ -171,8 +172,9 @@ const ContactMe = () => {
                 </div>
 
             </div>
+            </div>
         </>
     )
-}
+})
 
 export default ContactMe;

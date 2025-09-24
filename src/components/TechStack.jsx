@@ -1,17 +1,12 @@
 import React from 'react'
-import { RiReactjsLine, RiCss3Line, RiHtml5Line, RiJavascriptLine } from 'react-icons/ri'
-import { SiMongodb } from 'react-icons/si';
-import { FaNodeJs } from 'react-icons/fa';
-import { BiLogoPostgresql, BiLogoTailwindCss } from 'react-icons/bi';
 import Marquee from './Marquee';
 
-const TechStack = () => {
-  
+const TechStack = React.forwardRef((props, ref) => {
 
   return (
 
     
-     <div className='overflow-x-hidden container mx-auto w-full h-screen'>
+     <div ref={ref} className='overflow-x-hidden container mx-auto w-full h-screen'>
       <hr className='border border-sky-400 '></hr>
       <h2 className='my-20 text-center text-4xl'>Tech
             <span className='text-sky-400 ml-2'>
@@ -23,6 +18,6 @@ const TechStack = () => {
     </div>
    
   )
-}
+})
 
 export default TechStack

@@ -7,19 +7,44 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
+import { useRef } from 'react';
+
 
 function App() {
   
+  const heroRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const projectsRef = useRef(null);
+  const techStackRef = useRef(null);
+  const contactMeRef = useRef(null);
+
+  const scrollToSection = (elementRef) =>{
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className ="relative w-full antialiased bg-fixed bg-cover bg-center mx-0 px-0">
         
-      <Navbar/>
-      <Hero/>
-      <AboutMe/>
-      <Projects/>
-      <TechStack/>
-      <ContactMe/>
+      <Navbar
+        scrollToSection = {scrollToSection}
+        refs = {
+          {
+            hero: heroRef,
+            about: aboutMeRef,
+            projects: projectsRef,
+            skills: techStackRef,
+            contact: contactMeRef
+          }
+        }
+      />
+      <Hero ref = {heroRef}/>
+      <AboutMe ref={aboutMeRef}/>
+      <Projects ref={projectsRef}/>
+      <TechStack ref={techStackRef}/>
+      <ContactMe ref={contactMeRef}/>
       <Footer/> 
     </div>
   )

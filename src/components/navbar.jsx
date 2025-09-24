@@ -6,22 +6,31 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { useState, useRef } from 'react';
 
-const navigation = [
-  { name: `Home`, href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Experience', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Skills', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
 
-const Navbar = () =>{
+const Navbar = ({scrollToSection , refs}) =>{
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [isHidden, setIsHidden] = useState(false);
   const {scrollY} = useScroll();
   const lastYRef = useRef(0);
+
+  const handleLinkClick = (e, name) =>{
+    e.preventDefault();
+
+    //console.log(name);
+    //console.log(refs);
+
+
+    const sectionRef = refs[name];
+
+    if(sectionRef){
+      scrollToSection(sectionRef);
+    }
+
+    setIsMobileMenuOpen(false);
+
+  } 
 
   useMotionValueEvent(scrollY, "change", (y) => {
 
@@ -43,13 +52,13 @@ const Navbar = () =>{
   }
 
   //for smooth scroll
-  const handleLinkClick = (e, href) => {
+  /*const handleLinkClick = (e, href) => {
     e.preventDefault;
 
     const targetElement = document.querySelector(href);
 
     if(targetElement){
-      const offset = -85; /*try removing this and see what happens */
+      const offset = -85; //try removing this and see what happens//
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY + offset;
 
@@ -63,7 +72,7 @@ const Navbar = () =>{
     setIsMobileMenuOpen(false);
 
 
-  }
+  }*/
 
 
 
@@ -87,14 +96,14 @@ const Navbar = () =>{
           }
         }}
         >
-          <div className='flex items-center justify-center gap-6 rounded-full border-black border-2 mx-10 bg-white w-72' >
-            <a href='#' >
+          <div onClick={(e) => handleLinkClick(e, "hero")} className='flex items-center justify-center gap-6 rounded-full border-black border-2 mx-10 bg-white w-72' >
+            <a >
               <img src = {logo} width={60} height={60} alt= "logo" className=" mx-10" />
             </a>
           </div>
 
           <div className='flex items-center justify-center gap-4'>
-            <SlideTabs nav = {navigation}/>
+            <SlideTabs onLinkClick={handleLinkClick}/>
           </div>
         </motion.div>
 

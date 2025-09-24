@@ -5,7 +5,7 @@ import ProjectsFilterButton from './ProjectsFilterButton';
 
 import { useRef, useState } from 'react';
 import {motion ,useScroll, useTransform } from 'motion/react';
-const Projects = () => {
+const Projects = React.forwardRef((props, ref) => {
 
   const targetRef = useRef(null); 
   const {scrollYProgress} = useScroll({
@@ -26,7 +26,7 @@ const Projects = () => {
   ));
 
   return (
-    
+    <div ref = {ref}>
     <div ref={targetRef} className='relative h-[300vh] '>
       
       <div className='sticky top-0 h-screen items-center overflow-hidden'>
@@ -59,8 +59,8 @@ const Projects = () => {
           </motion.div>
       </div>
     </div>
-    
+    </div>
   )
-}
+})
 
 export default Projects
