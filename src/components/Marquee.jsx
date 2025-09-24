@@ -34,7 +34,10 @@ const controls = useAnimation();
 
 
     return(
-        <div className="container mx-auto">
+      <>
+        <hr className='border mx-5 border-sky-400 '></hr>
+        <div className="my-3 mx-5">
+          
             <div className="">
                 <motion.div 
                     className="flex myGradient w-max"
@@ -58,7 +61,10 @@ const controls = useAnimation();
                 </motion.div>
 
             </div>
+
         </div>
+        <hr className='mx-5 border border-sky-400 '></hr>
+       </>             
     )
 }
 
