@@ -6,15 +6,16 @@ const TechStack = React.forwardRef((props, ref) => {
   return (
 
     
-     <div ref={ref} className='overflow-x-hidden container mx-auto w-full h-screen'>
-      <hr className='border border-sky-400 '></hr>
-      <h2 className='my-20 text-center text-4xl'>Tech
+     <div ref={ref} className='overflow-x-hidden mx-auto w-full h-screen'>
+      
+      <Marquee/>
+      <h2 className='my-12 text-center text-4xl'>My
             <span className='text-sky-400 ml-2'>
-                Stack
+                Skills
             </span>
         </h2>
 
-      <Marquee/>
+      
     </div>
    
   )

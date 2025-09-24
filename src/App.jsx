@@ -19,10 +19,16 @@ function App() {
   const contactMeRef = useRef(null);
 
   const scrollToSection = (elementRef) =>{
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: 'smooth'
-    });
+
+    const target = elementRef.current?.scrollRef || elementRef.current;
+    console.log("Scroll target:", target);
+    if(target){
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    
   };
 
   return (
@@ -34,6 +40,7 @@ function App() {
           {
             hero: heroRef,
             about: aboutMeRef,
+            experience: aboutMeRef,
             projects: projectsRef,
             skills: techStackRef,
             contact: contactMeRef

@@ -52,7 +52,7 @@ export const SlideTabs = ({onLinkClick}) =>{
                     </Tab>
                     <Tab 
                         setPosition={setPosition}
-                        onClick={(e) => onLinkClick(e, "about")}
+                        onClick={(e) => onLinkClick(e, "experience")}
                         
                     >
                         {/*<RiSuitcaseFill/>*/} Experience
