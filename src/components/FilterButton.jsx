@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectsFilterButton = ({name, onClick, isSelected }) => {
+const FilterButton = ({name, onClick, isSelected }) => {
 
     const buttonStyles = isSelected
     ? "text-sky-400 border-sky-400"
@@ -15,4 +15,4 @@ const ProjectsFilterButton = ({name, onClick, isSelected }) => {
   )
 }
 
-export default ProjectsFilterButton
+export default FilterButton

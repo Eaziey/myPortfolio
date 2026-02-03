@@ -7,11 +7,18 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
-import { useRef } from 'react';
+import { useRef,useState, useEffect } from 'react';
+import Loader from './components/Loader';
 
 
 function App() {
-  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const heroRef = useRef(null);
   const aboutMeRef = useRef(null);
   const projectsRef = useRef(null);
@@ -31,9 +38,13 @@ function App() {
     
   };
 
+  if(loading){
+    return <Loader/>
+  };
+
   return (
     <div className ="relative w-full antialiased bg-fixed bg-cover bg-center mx-0 px-0">
-        
+      
       <Navbar
         scrollToSection = {scrollToSection}
         refs = {

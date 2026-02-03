@@ -1,7 +1,7 @@
 import React from 'react';
 import { projects } from '../constants';
 import ProjectCard from './ProjectCard';
-import ProjectsFilterButton from './ProjectsFilterButton';
+import FilterButton from './FilterButton';
 
 import { useRef, useState } from 'react';
 import {motion ,useScroll, useTransform } from 'motion/react';
@@ -27,7 +27,7 @@ const Projects = React.forwardRef((props, ref) => {
 
   return (
     <div ref = {ref}>
-    <div ref={targetRef} className='relative h-[300vh] '>
+    <div ref={targetRef} className='relative h-[250vh] '>
       
       <div className='sticky top-0 h-screen items-center overflow-hidden'>
           {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
@@ -38,10 +38,10 @@ const Projects = React.forwardRef((props, ref) => {
           </h2>
 
           <div className='text-white flex justify-center items-center gap-2 py-6 mb-6'>
-            <ProjectsFilterButton onClick={handleTagChange} name = "All" isSelected={tag ==="All"} />
-            <ProjectsFilterButton onClick={handleTagChange} name = "Frontend" isSelected={tag ==="Frontend"} />
-            <ProjectsFilterButton onClick={handleTagChange} name = "Backend" isSelected={tag ==="Backend"} />
-            <ProjectsFilterButton onClick={handleTagChange} name = "Fullstack" isSelected={tag ==="Fullstack"} />
+            <FilterButton onClick={handleTagChange} name = "All" isSelected={tag ==="All"} />
+            <FilterButton onClick={handleTagChange} name = "Frontend" isSelected={tag ==="Frontend"} />
+            <FilterButton onClick={handleTagChange} name = "Backend" isSelected={tag ==="Backend"} />
+            <FilterButton onClick={handleTagChange} name = "Fullstack" isSelected={tag ==="Fullstack"} />
           </div>
           <motion.div 
             className="flex flex-wrap"

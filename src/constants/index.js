@@ -1,4 +1,8 @@
-import projectImg1 from "../assets/139280-OT8HQA-203.jpg"
+import projectImg1 from "../assets/139280-OT8HQA-203.jpg";
+import { RiReactjsLine,RiCss3Line, RiHtml5Line, RiJavascriptLine } from "react-icons/ri";
+import { SiDotnet, SiVuedotjs, SiMongodb } from "react-icons/si";
+import { BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
+import { FaNodeJs, FaPython } from "react-icons/fa6";
 
 export const introduction_Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -68,3 +72,83 @@ export const projects = [
         liveWebUrl: "/"
     }
 ]
+
+export const techStack = [
+    {
+        tech: "React",
+        icon: RiReactjsLine,
+        proficiency: "Beginner",
+        type: 2,
+        tag: ["Secondary"]
+    },
+    {
+        tech: "CSS",
+        icon: RiCss3Line,
+        proficiency: "Intermediate",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Javascript",
+        icon: RiJavascriptLine,
+        proficiency: "Intermediate",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Html",
+        icon: RiHtml5Line,
+        proficiency: "Intermediate",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Node.js",
+        icon: FaNodeJs,
+        proficiency: "Beginner",
+        type: 2,
+        tag: ["Secondary"]
+    },
+    {
+        tech: "Postgresql",
+        icon: BiLogoPostgresql,
+        proficiency: "Beginner",
+        type: 2,
+        tag: ["Secondary"]
+    },
+    {
+        tech: "Mongodb",
+        icon: SiMongodb,
+        proficiency: "Beginner",
+        type: 2,
+        tag: ["Secondary"]
+    },
+    {
+        tech: "TailwindCSS",
+        icon: BiLogoTailwindCss,
+        proficiency: "Intermediate",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Dotnet",
+        icon: SiDotnet,
+        proficiency: "Beginner",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Vue.js",
+        icon: SiVuedotjs,
+        proficiency: "Beginner",
+        type: 1,
+        tag: ["Primary"]
+    },
+    {
+        tech: "Python",
+        icon: FaPython,
+        proficiency: "Beginner",
+        type: 3,
+        tag: ["Learning"]
+    },
+  ];

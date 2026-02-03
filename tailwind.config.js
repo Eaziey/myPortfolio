@@ -8,8 +8,8 @@ export default {
       extend: {
         colors: {
           skylight: '#38b6ff',
-          darkMode: '#1f2020',
-          tooRed: '#f70a09'
+          darkMode: '#000000',
+          lightDarkMode: '#18191E'
         }
       },
     },
