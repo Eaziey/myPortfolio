@@ -58,7 +58,7 @@ function App() {
           }
         }
       />
-      <Hero ref = {heroRef}/>
+      <Hero scrollToSection = {scrollToSection} projectsRef={projectsRef} ref = {heroRef}/>
       <AboutMe ref={aboutMeRef}/>
       <Projects ref={projectsRef}/>
       <TechStack ref={techStackRef}/>

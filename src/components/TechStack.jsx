@@ -34,22 +34,22 @@ const TechStack = React.forwardRef((props, ref) => {
  
 
   return (
-    <div ref={ref} className="overflow-x-hidden px-5 min-h-screen w-full ">
-      {<Marquee/>}
-      <h2 className="mt-10 mb-5 text-center text-4xl">
-        My <span className="text-sky-400 ml-2">Skills</span>
+    <div ref={ref} className="overflow-x-hidden min-h-screen max-w-full px-5 mx-5 border-t-2 border-sky-400">
+      {/*<Marquee/>*/}
+      <h2 className="mt-20 mb-5 text-start text-6xl">
+        My <span className="text-sky-400 ml-2">Tech Stack</span>
       </h2>
       {/*<p className="mt-5 mb-5 text-center text-xl w-1/2 flex justify-self-center">
         These are the technologies and tools I use to bring ideas to life. 
         I'm always expanding my skillset and learning new technologies.
       </p>*/}
-      <div className='text-white flex justify-center items-center gap-2 py-6 mb-6'>
+      <div className='text-white flex justify-start items-center gap-2 py-6 mb-6'>
             <FilterButton onClick={handleTagChange} name = "Primary" isSelected={tag ==="Primary"} />
             <FilterButton onClick={handleTagChange} name = "Secondary" isSelected={tag ==="Secondary"} />
             <FilterButton onClick={handleTagChange} name = "Learning" isSelected={tag ==="Learning"} />
       </div>
 
-      <div className="grid grid-cols-3 gap-4 place-items-center justify-self-center mb-10">
+      <div className="grid grid-cols-3 gap-6 place-items-center justify-self-center mt-16">
               {filteredStack.map((skill, index) => (
                 <SkillCard
                   key={skill.tech}

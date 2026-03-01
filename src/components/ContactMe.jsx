@@ -66,12 +66,16 @@ const ContactMe = React.forwardRef((props, ref) => {
     return (
         <>
             <div ref = {ref}>
-            <div ref={localRef} className=' pb-1 border-2 border-sky-400 overflow-y-hidden max-h-screen max-w-full mx-5'>
-                <p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>
-                <h2 className=' text-center text-4xl'>Contact</h2>
+            <div ref={localRef} className='overflow-x-hidden pb-1 border-t-2 border-sky-400 overflow-y-hidden max-h-screen max-w-full mx-5'>
+                {/*<p className=' mt-10 mb-2 text-center text-lg text-sky-400'>get in touch</p>*/}
+                <h2 className='mt-20 mb-5 text-start text-sky-400 text-6xl mx-10'>Contact 
+                    <span className='text-white ml-2'>
+                        Me
+                    </span>
+                </h2>
                 <div className='flex flex-wrap'>
 
-                    <motion.div className='w-full lg:w-1/2 ' variants={variants} initial="initial" whileInView={"animate"}>
+                    <motion.div className='w-full lg:w-1/2' variants={variants} initial="initial" whileInView={"animate"}>
 
                         <div className='flex flex-col items-center lg:items-start p-10 lg:my-5'>
                             <h5 className='text-xl font-bold text-sky-400 lg:mt-3'>Let's connect</h5>
@@ -148,20 +152,20 @@ const ContactMe = React.forwardRef((props, ref) => {
                                     <div className='w-full lg:w-1/2 '> 
                                         <div className="input-box mr-2">
                                             <label htmlFor='name' className='text-white block mb-2 text-sm font-medium mt-6'>Full Name</label>
-                                            <input id="name" type='text' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full p-2.5 ' name= "name" placeholder='John Doe' required/>
+                                            <input id="name" type='text' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm block w-full p-2.5' name= "name" placeholder='John Doe' required/>
                                         </div>
                                     </div>
                                     <div className='w-full lg:w-1/2 '> 
                                         <div className="input-box">
                                             <label htmlFor='email' className='text-white block mb-2 text-sm font-medium mt-6'>Email Address</label>
-                                            <input type='email' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full p-2.5 ' name= "email" placeholder='johnDoe@google.com' required/>
+                                            <input type='email' className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm block w-full p-2.5 ' name= "email" placeholder='johnDoe@google.com' required/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="input-box">
                                     <label htmlFor='message' className='text-white block mb-2 text-sm font-medium mt-6'>Your message</label>
-                                    <textarea className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm rounded-lg block w-full h-60 p-2.5 ' name="message" id="" placeholder="Let's talk about..." required></textarea>
+                                    <textarea className='bg-[#18191E] border border-sky-400 placeholder-slate-600 text-sm block w-full h-60 p-2.5 ' name="message" id="" placeholder="Let's talk about..." required></textarea>
                                 </div>
                                 <button type="submit" className='my-8 py-2 rounded-full w-full lg:w-40 bg-sky-400 hover:bg-transparent hover:text-sky-400 text-white border-2 border-sky-400 font-semibold'>Send Message</button>
                             </motion.form>
