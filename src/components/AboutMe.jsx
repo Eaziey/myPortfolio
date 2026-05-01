@@ -25,11 +25,8 @@ const AboutMe = React.forwardRef((props, ref) => {
     }
   return (
     <div ref={containerRef} className='w-full h-screen overflow-hidden'>
-        
-
         <div className="flex flex-wrap pb-2">
             <div 
-                
                 className='lg:h-screen w-full lg:w-2/5'
             >
                 <div className="lg:h-full flex items-center justify-center bg-darkMode">
@@ -42,24 +39,29 @@ const AboutMe = React.forwardRef((props, ref) => {
             >
                  
             <div className="flex flex-col items-center justify-center text-center bg-white h-screen">
-                <div className=" relative w-full max-w-6xl h-1/2 [perspective:1000px] ">
+                <div className="relative w-full max-w-6xl h-2/3 [perspective:1000px]">
                 
                     <motion.div 
                         className='w-full h-full [transform-style:preserve-3d]'
                         animate = {{rotateY: !viewAbout? 180: 0}}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="absolute inset-0 flex flex-col items-center  [backface-visibility:hidden]">
-                            <div className="max-w-2xl text-center"><h2 className="text-4xl text-black">
-                              About <span className="text-skylight ml-2">Me</span>
-                            </h2>
-                            <p className="text-xl text-left font-semibold mt-14 text-darkMode">
-                              {about_me}
-                            </p></div>
+                        <div className="absolute inset-0 flex flex-col items-center [backface-visibility:hidden]">
+                            <div className="max-w-2xl text-center">
+                                <h2 className="text-6xl text-black">
+                                  About <span className="text-skylight ml-2">Me</span>
+                                </h2>
+                                {
+                                    about_me.map((paragraph, index) =>(
+                                        <p key={index} className="text-left text-lg mt-6 text-darkMode">
+                                          {paragraph}
+                                        </p>
+                                    ))
+                                }
+                            </div>
                         </div>
                         <div className="absolute inset-0 flex flex-col items-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
                             <Experience/>
-                        
                         </div>
                     </motion.div>
                     

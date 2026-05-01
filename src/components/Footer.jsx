@@ -4,7 +4,7 @@ import logo from "../assets/1.png";
 const Footer = () =>{
     return(
         <>
-            <hr className="border border-sky-400 mt-10 mx-5"/>
+            <hr className="border border-sky-400 mx-5"/>
             <div className="flex h-20 flex-col justify-center items-center  ">
                
                 {/*<div className="" >

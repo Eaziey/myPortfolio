@@ -6,7 +6,6 @@ import FilterButton from './FilterButton';
 import { useRef, useState } from 'react';
 import {motion ,useScroll, useTransform } from 'motion/react';
 const Projects = React.forwardRef((props, ref) => {
-
   const targetRef = useRef(null); 
   const {scrollYProgress} = useScroll({
     target: targetRef,
@@ -29,30 +28,30 @@ const Projects = React.forwardRef((props, ref) => {
     <div ref = {ref}>
     <div ref={targetRef} className='relative h-[250vh] '>
       
-      <div className='sticky top-0 h-screen items-center overflow-hidden'>
+      <div className='sticky top-0 h-screen items-center overflow-hidden px-10'>
           {/*<h2 className='my-10 text-center text-4xl'>Projects</h2>*/}
-         <h2 className='mt-20 mb-5 text-center text-sky-400 text-4xl'>My 
+         <h2 className='mt-20 mb-5 text-start text-sky-400 text-6xl'>My 
               <span className='text-white ml-2'>
                   Projects
               </span>
           </h2>
 
-          <div className='text-white flex justify-center items-center gap-2 py-6 mb-6'>
+          <div className='text-white flex justify-start items-start gap-2 py-6 mb-6'>
             <FilterButton onClick={handleTagChange} name = "All" isSelected={tag ==="All"} />
             <FilterButton onClick={handleTagChange} name = "Frontend" isSelected={tag ==="Frontend"} />
             <FilterButton onClick={handleTagChange} name = "Backend" isSelected={tag ==="Backend"} />
             <FilterButton onClick={handleTagChange} name = "Fullstack" isSelected={tag ==="Fullstack"} />
           </div>
           <motion.div 
-            className="flex flex-wrap"
+            className="flex flex-wrap mt-10"
             style={{x}}
           >
           {filteredProjects.map((proj, index) => (
-            <div key = {index}  className='w-full lg:w-1/3 mt-10'>
+            <div key = {index}  className='w-full lg:w-1/3'>
 
               <div key = {index} className='flex flex-row items-center text-center lg:items-start'>
 
-                     <ProjectCard key = {proj.id} imgUrl={proj.image} title={proj.title} description={proj.description} gitUrl={proj.gitUrl} liveWebUrl={proj.liveWebUrl}/>
+                     <ProjectCard key = {proj.id} imgUrl={proj.image} title={proj.title} description={proj.description} gitUrl={proj.gitUrl} liveWebUrl={proj.liveWebUrl} tech={proj.technologies}/>
 
               </div>
             </div>))}

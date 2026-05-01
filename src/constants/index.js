@@ -1,16 +1,24 @@
 import projectImg1 from "../assets/139280-OT8HQA-203.jpg";
-import { RiReactjsLine,RiCss3Line, RiHtml5Line, RiJavascriptLine } from "react-icons/ri";
+import { RiReactjsLine,RiCss3Line, RiHtml5Line, RiJavascriptLine, RiBriefcaseLine, RiGraduationCapLine } from "react-icons/ri";
 import { SiDotnet, SiVuedotjs, SiMongodb } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
 import { FaNodeJs, FaPython } from "react-icons/fa6";
+import LandingPage from "../assets/LandingPage.png"
 
 export const introduction_Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-export const about_me = `I am a BSc in IT Information and Knowledge Systems graduate from the University of Pretoria with hands-on experience in software development through academic projects in web development, database management, and computer security. 
-Highly motivated to pursue graduate opportunities in software development, with a focus on building
-efficient, user-friendly web applications and advancing solutions in computer security. Passionate about
-leveraging technical expertise to drive innovation and deliver impactful, real-world solutions within the
-industry.`
+export const about_me = [
+    `Hi! I’m Letlhogonolo Rakgantsho, also known as Eaziey, a dedicated Junior Full‑Stack Developer
+     with a genuine passion for building functional and meaningful digital experiences.`,
+    `My journey into tech began with a curiosity about how apps and systems work, which 
+    eventually led me to pursue a BSc in IT in Information and Knowledge Systems at the 
+    University of Pretoria. There, I built a strong foundation in software engineering, 
+    web development, database design, and computer security.`,
+    `Outside of development, I enjoy exploring music, fashion, football, and anything that 
+    sparks creativity. Whether I’m discovering new sounds or diving into new ideas, these 
+    interests keep me inspired and influence how I approach design and problem‑solving.`,
+    `Make sure you check out my development journey by clicking on the button below.`
+]
 
 export const contact_message= `I am currently looking for graduate programmes, Internships
 or entry level opportunities within the Software Engineering field.
@@ -20,19 +28,20 @@ contact me and I'll definitely get back to you :).`;
 
 export const xp = [
     {
-        year : "2025 - 2026",
-        role: "Intern",
+        year : "2025 - Present",
+        role: "Junior Full stack developer (Graduate)",
         company: "Tourvest Travel Services",
-        description: `Took on a 12 months Internship at Tourvest Travel Services`,
-        technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ]
+        description: `Currently completing a 12‑month Graduate Internship at Tourvest Travel Services(TravelIT), contributing to the development and maintenance of internal and client-facing platforms using C#, .NET Core, Vue.js, and related technologies.`,
+        technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ],
+        icon: RiBriefcaseLine
     },
     {
-        year : "2021 - 2024",
+        year : "2021 - 2025",
         role: "Student",
         company: "University of Pretoria",
-        description: `Studied full time for an undergraduate degree. Finally
-        graduated with a BSc in IT in Information and Knowledge Sytems , majoring in software development in 2025.`,
-        technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ]
+        description: `I began my tech journey in 2021 when I joined the University of Pretoria as an undergraduate. I later graduated in 2025 with a full‑time BSc in IT (Information and Knowledge Systems), focusing on core software engineering and system design.`,
+        technologies: ["C++", "C#", "Java", "React.js", "Javascript", "HTML", "CSS", "Tailwind css", "BootStrap", "MongoDB", "Postgresql", "Node.js", "Express.js", "Git"  ],
+        icon: RiGraduationCapLine
     }
 
 ]
@@ -40,14 +49,14 @@ export const xp = [
 export const projects = [
     {
         id : 1,
-        title : "My Project1",
-        image: projectImg1,
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
-        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        title : "GitSplore",
+        image: LandingPage,
+        description: `App to explore any public GitHub user’s repositories and commits.
+        Search repos, view commit logs, drill into commit details (files changed, additions/deletions, diffs), mark commits as favourites, sort & paginate`,
+        technologies: ["Vue.js", "Typescript","TailwindCSS","Vitest"],
         tag: ["All", "Frontend"],
-        gitUrl: "/",
-        liveWebUrl: "/"
+        gitUrl: "https://github.com/Eaziey/GitHub_Commit_Explorer",
+        liveWebUrl: "https://eaziey.github.io/GitHub_Commit_Explorer/"
     },
     {
         id : 2,
@@ -62,6 +71,28 @@ export const projects = [
     },
     {
         id : 3,
+        title : "My Project3",
+        image: projectImg1,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Backend"],
+        gitUrl: "/",
+        liveWebUrl: "/"
+    },
+    {
+        id : 4,
+        title : "My Project3",
+        image: projectImg1,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+        technologies: ["React.js", "Javascript","Tailwind css","MongoDB", "Node.js", "Express.js"],
+        tag: ["All", "Backend"],
+        gitUrl: "/",
+        liveWebUrl: "/"
+    },
+    {
+        id : 5,
         title : "My Project3",
         image: projectImg1,
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
